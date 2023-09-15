@@ -12,7 +12,7 @@
             <div class="flex flex-row space-x-2">
                 <button class="flex flex-row justify-center items-center bg-gray-200 hover:bg-gray-300 rounded-md px-4 py-2 text-gray-700 space-x-2" onclick="window.history.back();">
                     <i class="fas fa-arrow-left"></i>
-                    <span>Back</span>
+                    <span>Kembali</span>
                 </button>
                 <button class="flex flex-row justify-center items-center bg-gray-200 hover:bg-gray-300 rounded-md px-4 py-2 text-gray-700">
                     <i class="fas fa-ellipsis-v"></i>
@@ -25,8 +25,8 @@
             <div class="flex flex-row justify-between items-center">
                 <div class="flex flex-row space-x-2">
                     <div class="flex flex-col space-y-1">
-                        <h1 class="text-lg font-bold text-gray-700">Segmentation Image</h1>
-                        <p class="text-sm text-gray-500">Here is a list of segmentation that have been uploaded</p>
+                        <h1 class="text-lg font-bold text-gray-700">Gambar Segmentasi</h1>
+                        <p class="text-sm text-gray-500">Berikut adalah daftar segmentasi yang telah diunggah</p>
                     </div>
                 </div>
                 <div class="">
@@ -36,7 +36,7 @@
         <div class="flex flex-row justify-between items-center space-x-2">
             <button onclick="printDiv('divPrint')" class="flex flex-row justify-center items-center bg-gray-200 hover:bg-gray-300 rounded-md px-4 py-2 text-gray-700 space-x-2">
                 <i class="fas fa-print"></i>
-                <span>Print</span>
+                <span>Cetak</span>
             </button>
             <div class="flex flex-row space-x-2">
                 <form class="flex flex-row justify-center items-center space-x-2" method="GET">
@@ -62,7 +62,7 @@
         </div>
             {% if images %}
             <div class="flex flex-row flex-wrap justify-center items-center space-x-2" id="divPrint">
-                <h1 class="text-3xl font-bold text-gray-700 hidden m-4" id="H1divPrint">Segmentation Image Result</h1>
+                <h1 class="text-3xl font-bold text-gray-700 hidden m-4" id="H1divPrint">Hasil Gambar Segmentasi</h1>
                 <table class="table-auto w-full">
                     <thead>
                         <tr>

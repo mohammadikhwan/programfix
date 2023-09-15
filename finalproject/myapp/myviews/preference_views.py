@@ -189,8 +189,8 @@ class DashboardClassView(ListView):
         self.extra_context = {
             "uploaders": uploaders,
             "colors": colors,
-            "title": "Dashboard",
-            "contributor": "TOKTIK Team",
+            "title": "Beranda",
+            "contributor": "Brambang Team",
             "content": "Dashboard, a place to see the overview of the data in TOKTIK. You can see the number of data uploaded by each user, the number of segmented and unsegmented data, the color distribution of the images, and the number of segmentations for each segmentation type.",
             "app_css": "myapp/css/styles.css",
             "app_js": "myapp/js/scripts.js",

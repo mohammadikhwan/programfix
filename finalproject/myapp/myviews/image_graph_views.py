@@ -24,7 +24,7 @@ class ImageGraphClassView(ListView):
     context_object_name = "images"
     paginate_by = 10
     extra_context = {
-        "title": "Image Graph",
+        "title": "Grafik Gambar",
         "menus": menus,
         "logo": "myapp/images/Logo.png",
         "content": "Welcome to TOKSlice!",
@@ -193,7 +193,7 @@ class ImageTableColorClassView(ListView):
     context_object_name = "images"
     paginate_by = 10
     extra_context = {
-        "title": "Image Table Color",
+        "title": "Tabel Warna Gambar",
         "menus": menus,
         "logo": "myapp/images/Logo.png",
         "content": "Welcome to TOKSlice!",
@@ -271,7 +271,7 @@ class ImageGraphColorClassView(ListView):
     context_object_name = "images"
     paginate_by = 10
     extra_context = {
-        "title": "Image Graph Color",
+        "title": "Grafik Warna Gambar",
         "menus": menus,
         "logo": "myapp/images/Logo.png",
         "content": "Welcome to TOKSlice!",

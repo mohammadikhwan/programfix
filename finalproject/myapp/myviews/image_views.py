@@ -50,8 +50,8 @@ class ImageUpdateView(UpdateView):
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(**kwargs)
         context["title"] = "Image Update"
-        context["contributor"] = "TOKTIK Team"
-        context["content"] = "Welcome to TOKTIK! Update Image"
+        context["contributor"] = "Brambang Team"
+        context["content"] = "Welcome to Brambang! Update Image"
         context["app_css"] = "myapp/css/styles.css"
         context["app_js"] = "myapp/js/scripts.js"
         context["logo"] = "myapp/images/Logo.png"
@@ -184,8 +184,8 @@ class ImageDeleteView(DeleteView):
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(**kwargs)
         context["title"] = "Image Delete"
-        context["contributor"] = "TOKTIK Team"
-        context["content"] = "Welcome to TOKTIK! Delete Image"
+        context["contributor"] = "Brambang Team"
+        context["content"] = "Welcome to Brambang! Delete Image"
         context["app_css"] = "myapp/css/styles.css"
         context["app_js"] = "myapp/js/scripts.js"
         context["logo"] = "myapp/images/Logo.png"
@@ -319,9 +319,9 @@ class ImageUploadView(CreateView):
     # update context
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["title"] = "Image Upload"
-        context["contributor"] = "TOKTIK Team"
-        context["content"] = "Welcome to TOKTIK! Create Image"
+        context["title"] = "Unggah Gambar"
+        context["contributor"] = "Brambang Team"
+        context["content"] = "Welcome to Brambang! Create Image"
         context["app_css"] = "myapp/css/styles.css"
         context["app_js"] = "myapp/js/scripts.js"
         context["logo"] = "myapp/images/Logo.png"
@@ -375,8 +375,8 @@ class ImageSummaryView(ListView):
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(**kwargs)
         context["title"] = "Image Summary"
-        context["contributor"] = "TOKTIK Team"
-        context["content"] = "Welcome to TOKTIK! Image Summary"
+        context["contributor"] = "Brambang Team"
+        context["content"] = "Welcome to Brambang! Image Summary"
         context["app_css"] = "myapp/css/styles.css"
         context["app_js"] = "myapp/js/scripts.js"
         context["logo"] = "myapp/images/Logo.png"
@@ -482,9 +482,9 @@ class ImageListView(ListView):
     # update context
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["title"] = "Image List"
-        context["contributor"] = "TOKTIK Team"
-        context["content"] = "Welcome to TOKTIK!"
+        context["title"] = "Daftar Gambar"
+        context["contributor"] = "Brambang Team"
+        context["content"] = "Welcome to Brambang!"
         context["app_css"] = "myapp/css/styles.css"
         context["app_js"] = "myapp/js/scripts.js"
         context["logo"] = "myapp/images/Logo.png"
@@ -570,8 +570,8 @@ class ImageUploaderView(ListView):
         # Capitalize first letter of uploader
         context["title"] = "Image Uploader " + self.kwargs["uploader"].capitalize()
         context["kwargs_uploader"] = self.kwargs["uploader"]
-        context["contributor"] = "TOKTIK Team"
-        context["content"] = "Welcome to TOKTIK!"
+        context["contributor"] = "Brambang Team"
+        context["content"] = "Welcome to Brambang!"
         context["app_css"] = "myapp/css/styles.css"
         context["app_js"] = "myapp/js/scripts.js"
         context["logo"] = "myapp/images/Logo.png"

@@ -1376,11 +1376,6 @@ select {
   background-color: rgb(254 215 170 / var(--tw-bg-opacity));
 }
 
-.bg-pink-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(251 207 232 / var(--tw-bg-opacity));
-}
-
 .bg-purple-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(233 213 255 / var(--tw-bg-opacity));
@@ -1493,16 +1488,8 @@ select {
   --tw-gradient-to: #4ade80 var(--tw-gradient-to-position);
 }
 
-.to-purple-400 {
-  --tw-gradient-to: #c084fc var(--tw-gradient-to-position);
-}
-
 .to-red-400 {
   --tw-gradient-to: #f87171 var(--tw-gradient-to-position);
-}
-
-.to-teal-400 {
-  --tw-gradient-to: #2dd4bf var(--tw-gradient-to-position);
 }
 
 .bg-clip-text {
@@ -1792,11 +1779,6 @@ select {
   color: rgb(194 65 12 / var(--tw-text-opacity));
 }
 
-.text-pink-700 {
-  --tw-text-opacity: 1;
-  color: rgb(190 24 93 / var(--tw-text-opacity));
-}
-
 .text-purple-700 {
   --tw-text-opacity: 1;
   color: rgb(126 34 206 / var(--tw-text-opacity));
@@ -2049,11 +2031,6 @@ select {
 .hover\:bg-orange-300:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(253 186 116 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-pink-300:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 168 212 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-purple-300:hover {

@@ -12,7 +12,7 @@
             <div class="flex flex-row space-x-2">
                 <button class="flex flex-row justify-center items-center bg-gray-200 hover:bg-gray-300 rounded-md px-4 py-2 text-gray-700 space-x-2" onclick="window.history.back();">
                     <i class="fas fa-arrow-left"></i>
-                    <span>Back</span>
+                    <span>Kembali</span>
                 </button>
                 <button class="flex flex-row justify-center items-center bg-gray-200 hover:bg-gray-300 rounded-md px-4 py-2 text-gray-700">
                     <i class="fas fa-ellipsis-v"></i>
@@ -23,11 +23,11 @@
         <div class="flex flex-row justify-between items-center mb-2">
             <button onclick="printDiv('divPrint')" class="flex flex-row justify-center items-center bg-gray-200 hover:bg-gray-300 rounded-md px-4 py-2 text-gray-700 space-x-2">
                 <i class="fas fa-print"></i>
-                <span>Print</span>
+                <span>Cetak</span>
             </button>
             <form class="flex flex-row justify-center items-center space-x-2" method="GET">
                     <select name="type" class="flex flex-row justify-center items-center rounded-md px-4 py-2 text-gray-700 w-60">
-                        <option value="all" {% if request.GET.type == 'all' %} selected {% endif %}>All</option>
+                        <option value="all" {% if request.GET.type == 'all' %} selected {% endif %}>Semua</option>
                         {% for segmentation_type in segmentation_type_dict %}
                             <option value="{{ segmentation_type }}" {% if request.GET.type == segmentation_type %} selected {% endif %}>{{ segmentation_type }}</option>
                         {% endfor %}
@@ -44,7 +44,7 @@
             <div class="flex flex-row justify-between items-center">
                 <div class="flex flex-row space-x-2">
                     <div class="flex flex-col space-y-1">
-                        <h1 class="text-lg font-bold text-gray-700">Image Details</h1>
+                        <h1 class="text-lg font-bold text-gray-700">Detail Gambar</h1>
                     </div>
                 </div>
             </div>
@@ -57,7 +57,7 @@
                     <div class="flex flex-row justify-center items-center">
                         <a href="{{ image.image.url }}" class="text-sm text-blue-500 hover:text-blue-700">
                             <i class="fas fa-eye"></i>
-                            <span class="ml-2">View Full Image</span>
+                            <span class="ml-2">Lihat Gambar</span>
                         </a>
                     </div>
                 </div>
@@ -114,14 +114,14 @@
                     </div>
                     {% if chartjs %}
                     <p>
-                        The Best Way to Segmentation this Image is 
+                        Cara Terbaik untuk Segmentasi Gambar ini adalah 
                         <span class="text-red-500 font-bold">{{ chartjs.best.segmentation_type|title }}</span> 
-                        that has score of MSE <span class="text-red-500 font-bold">{{ chartjs.best.mse|floatformat:2 }}</span> 
-                        and PSNR <span class="text-red-500 font-bold">{{ chartjs.best.psnr|floatformat:2 }}</span> . 
-                        Image is Preprocessing with resize image to <span class="text-red-500 font-bold">{{ chartjs.best.image_preprocessing.resize_percent|intcomma }}%</span> 
-                        and brightness ajustment to <span class="text-red-500 font-bold">{{ chartjs.best.image_preprocessing.brightness_percent|intcomma }}%</span> 
-                        and contrast ajustment to <span class="text-red-500 font-bold">{{ chartjs.best.image_preprocessing.contrast_percent|intcomma }}%</span>. 
-                        Use image improvement with <span class="text-red-500 font-bold">
+                        yang memiliki skor MSE <span class="text-red-500 font-bold">{{ chartjs.best.mse|floatformat:2 }}</span> 
+                        dan PSNR <span class="text-red-500 font-bold">{{ chartjs.best.psnr|floatformat:2 }}</span> . 
+                        Gambar adalah Preprocessing dengan mengubah ukuran gambar menjadi <span class="text-red-500 font-bold">{{ chartjs.best.image_preprocessing.resize_percent|intcomma }}%</span> 
+                        dan penyesuaian kecerahan untuk <span class="text-red-500 font-bold">{{ chartjs.best.image_preprocessing.brightness_percent|intcomma }}%</span> 
+                        dan penyesuaian kontras untuk <span class="text-red-500 font-bold">{{ chartjs.best.image_preprocessing.contrast_percent|intcomma }}%</span>. 
+                        Gunakan peningkatan gambar dengan <span class="text-red-500 font-bold">
                             {% if chartjs.best.image_preprocessing.gaussian_filter %}Gaussian Filter
                             {% elif chartjs.best.image_preprocessing.median_filter %}Median Filter
                             {% elif chartjs.best.image_preprocessing.mean_filter %}Mean Filter
@@ -137,7 +137,7 @@
                 <!-- Segmentation View selected -->
                 <div class="flex-1 flex-col space-y-2 segmentationView">
                     <div class="flex flex-col space-y-2">
-                        <h1 class="text-lg font-bold text-gray-700">Segmentation Graph {{ request.GET.segmentation|title }}</h1>
+                        <h1 class="text-lg font-bold text-gray-700">Grafik Segmentasi {{ request.GET.segmentation|title }}</h1>
                     </div>
                     <div class="flex flex-col flex-wrap justify-start items-start" id="chartContainer">
                         <canvas id="chartku" class="w-full" height="230"></canvas>
@@ -148,7 +148,7 @@
                 <!-- Segmentation View selected -->
                 <div class="flex flex-row justify-between items-center mb-2">
                     <div class="flex flex-col space-y-2">
-                        <h1 class="text-lg font-bold text-gray-700">Segmentation Image</h1>
+                        <h1 class="text-lg font-bold text-gray-700">Gambar Segmentasi</h1>
                     </div>
                     <div class="flex flex-row space-x-2 w-auto">
                         <!-- button export Segmentation -->
@@ -171,7 +171,7 @@
                             <!-- button selected Segmentation -->
                             <button class="flex flex-row justify-center items-center bg-blue-200 hover:bg-blue-300 rounded-md px-4 py-2 text-gray-700">
                                 <i class="fas fa-search"></i>
-                                <span class="ml-2">Segmentation</span>
+                                <span class="ml-2">Segmentasi</span>
                             </button>
                         </form>
                     </div>

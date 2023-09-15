@@ -34,52 +34,52 @@ menus = []
 
 # Membuat menu untuk it_admin_menus
 it_admin_menus = [
-    create_menu("Dashboard", "/dashboard/", "fas fa-tachometer-alt", id="dashboard"),
+    create_menu("Beranda", "/dashboard/", "fas fa-tachometer-alt", id="dashboard"),
     create_menu(
-        "Images",
+        "Gambar",
         "",
         "fas fa-image",
         dropdown=True,
         id="image",
         submenus=[
-            create_menu("Image Upload", "/image/upload/", "fas fa-upload", id="upload"),
-            create_menu("Image All", "/image/", "fas fa-list", id="image_all"),
-            create_menu(
-                "Image Summary",
-                "/image/summary/",
-                "fas fa-chart-bar",
-                id="image_summary",
-            ),
+            create_menu("Unggah Gambar", "/image/upload/", "fas fa-upload", id="upload"),
+            create_menu("Daftar Gambar", "/image/", "fas fa-list", id="image_all"),
+            # create_menu(
+            #     "Ringkasan Gambar",
+            #     "/image/summary/",
+            #     "fas fa-chart-bar",
+            #     id="image_summary",
+            # ),
         ],
     ),
     create_menu(
-        "Segmentation",
+        "Segmentasi",
         "",
         "fas fa-chart-pie",
         dropdown=True,
         id="segmentation",
         submenus=[
             create_menu(
-                "Do Segmentation", "/segmentation/", "fas fa-play", id="segmentation"
+                "Segmentasi", "/segmentation/", "fas fa-play", id="segmentation"
             ),
+            # create_menu(
+            #     "Segmentasi Berdasarkan Warna",
+            #     "/image/graph/color/",
+            #     "fas fa-palette",
+            #     id="color",
+            # ),
             create_menu(
-                "Segmentation by Color",
-                "/image/graph/color/",
-                "fas fa-palette",
-                id="color",
-            ),
-            create_menu(
-                "Segmentation Table",
+                "Tabel Segmentasi",
                 "/image/table/color/",
                 "fas fa-table",
                 id="table",
             ),
-            create_menu(
-                "Segmentation Summary",
-                "/segmentation/summary/",
-                "fas fa-chart-bar",
-                id="segmentation_summary",
-            ),
+            # create_menu(
+            #     "Ringkasan Segmentasi",
+            #     "/segmentation/summary/",
+            #     "fas fa-chart-bar",
+            #     id="segmentation_summary",
+            # ),
         ],
     ),
 ]

@@ -12,7 +12,7 @@
             <div class="flex flex-row space-x-2">
                 <button class="flex flex-row justify-center items-center bg-gray-200 hover:bg-gray-300 rounded-md px-4 py-2 text-gray-700 space-x-2" onclick="window.history.back();">
                     <i class="fas fa-arrow-left"></i>
-                    <span>Back</span>
+                    <span>Kembali</span>
                 </button>
                 <button class="flex flex-row justify-center items-center bg-gray-200 hover:bg-gray-300 rounded-md px-4 py-2 text-gray-700">
                     <i class="fas fa-ellipsis-v"></i>
@@ -21,34 +21,34 @@
         </div>
         <hr class="border-gray-200 mb-2">
         <div class="flex flex-col space-y-2">
-            <p class="text-sm text-gray-500">Welcome to the Dashboard, your central hub for obtaining a comprehensive overview of the data within TOKTIK. Here, you can access valuable insights such as the number of data uploads by each user, the segmentation status of the images, the color distribution across the uploaded images, and the segmentation counts for different segmentation types.</p>
+            <p class="text-sm text-gray-500">Selamat datang di Brambang.com, Brambang.com merupakan sistem yang digunakan untuk melakukan segmentasi data citra daun bawang merah menggunakan metode Thresholding Otsu dan Adaptive.</p>
             <!-- Chart JS For Segmentation Summary -->
             <div class="flex flex-row space-x-2">
                 <div class="flex w-96 flex-col space-y-2">
                     <div class="flex-1 flex-col space-y-2 border border-gray-200 p-2 rounded-md shadow-md">
-                        <h1 class="text-xl font-bold text-gray-700">Image Uploads Segmented</h1>
+                        <h1 class="text-xl font-bold text-gray-700">Gambar Upload Tersegmentasi</h1>
                         <div class="flex flex-col flex-wrap justify-start items-start" id="chartContainer">
                                 <canvas id="chartku" class="w-full" height="230"></canvas>
                         </div>
-                        <p class="text-sm text-gray-500">Segmented image uploads are the number of uploads by users, and the number of images from users that have not been segmented<span class="bg-red-500 text-white px-2 py-1 rounded-md ml-2">{{ chartjs.num_images_not_segmented_user }} images</span></p>
+                        <p class="text-sm text-gray-500">Unggahan gambar tersegmentasi adalah jumlah unggahan oleh pengguna, dan jumlah gambar dari pengguna yang belum tersegmentasi<span class="bg-red-500 text-white px-2 py-1 rounded-md ml-2">{{ chartjs.num_images_not_segmented_user }} images</span></p>
                     </div>
                 </div>
                 <div class="flex-1 flex-col space-y-2">
                     <div class="flex-1 flex-col space-y-2 border border-gray-200 p-2 rounded-md shadow-md">
-                        <h1 class="text-xl font-bold text-gray-700">Number of Users and Segmented Images vs. Not yet segmented</h1>
+                        <h1 class="text-xl font-bold text-gray-700">Jumlah Pengguna dan Gambar Tersegmentasi vs. Belum tersegmentasi</h1>
                         <div class="flex flex-col flex-wrap justify-start items-start" id="chartContainer2">
                                 <canvas id="chartku2" class="w-full" height="230"></canvas>
                         </div>
                     </div>
-                    <p class="text-sm text-gray-500">Image uploads are the number of uploads by the user</p>
+                    <p class="text-sm text-gray-500">Unggahan gambar adalah jumlah unggahan oleh pengguna</p>
                     <div class="flex-1 flex-col space-y-2 border border-gray-200 p-2 rounded-md shadow-md">
-                        <h1 class="text-xl font-bold text-gray-700">Color Distribution of User-Uploaded Images</h1>
+                        <h1 class="text-xl font-bold text-gray-700">Distribusi Warna Gambar yang Diunggah Pengguna</h1>
                         <div class="flex flex-col flex-wrap justify-start items-start" id="chartContainer">
                                 <canvas id="chartku3" class="w-full" height="230"></canvas>
                         </div>
                     </div>
                     <div class="flex-1 flex-col space-y-2 border border-gray-200 p-2 rounded-md shadow-md">
-                        <h1 class="text-xl font-bold text-gray-700">Distribution of segmentation results based on the segmentation type</h1>
+                        <h1 class="text-xl font-bold text-gray-700">Distribusi hasil segmentasi berdasarkan jenis segmentasi</h1>
                         <div class="flex flex-col flex-wrap justify-start items-start" id="chartContainer">
                                 <canvas id="chartku4" class="w-full" height="230"></canvas>
                         </div>
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
         labels: labels_user,
         datasets: [
                 {
-                    label: 'Image Uploads Segmented',
+                    label: '',
                     data: data_user,
                     backgroundColor: backgroundColor_user,
                     hoverOffset: 4
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
         labels: labels_segmentation,
         datasets: [
                 {
-                    label: 'Number of Users and Segmented Images vs. Not yet segmented',
+                    label: '',
                     data: data_segmentation,
                     backgroundColor: backgroundColor_segmentation,
                     hoverOffset: 4
@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
         labels: labels_color,
         datasets: [
                 {
-                    label: 'Color Distribution of User-Uploaded Images',
+                    label: '',
                     data: data_color,
                     backgroundColor: backgroundColor_color,
                     hoverOffset: 4
@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function() {
         labels: labels_segmentation_result,
         datasets: [
                 {
-                    label: 'Distribution of segmentation results based on the segmentation type',
+                    label: '',
                     data: data_segmentation_result,
                     backgroundColor: backgroundColor_segmentation_result,
                     hoverOffset: 4
@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
                 title: {
                     display: true,
-                    text: 'Chart Image Segmented by User'
+                    text: ''
                 }
             }
         },
@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
                 title: {
                     display: true,
-                    text: 'Image Uploads Segmented vs. Not yet segmented'
+                    text: ''
                 }
             }
         },
@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
                 title: {
                     display: true,
-                    text: 'Color Distribution of User-Uploaded Images'
+                    text: ''
                 }
             }
         },
@@ -214,7 +214,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
                 title: {
                     display: true,
-                    text: 'Distribution of segmentation results based on the segmentation type'
+                    text: ''
                 }
             }
         },
